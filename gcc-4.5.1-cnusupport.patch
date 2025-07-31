@@ -1,0 +1,29 @@
+diff -Naur -x.DS_Store -x autom4te.cache gcc-4.5.1-orig/libstdc++-v3/configure gcc-4.5.1/libstdc++-v3/configure
+--- gcc-4.5.1-orig/libstdc++-v3/configure	2010-06-10 18:58:13.000000000 +1000
++++ gcc-4.5.1/libstdc++-v3/configure	2010-08-25 22:04:39.000000000 +1000
+@@ -6155,7 +6155,11 @@
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-beos*)
++cnu*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
++bbeos*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+diff -Naur -x.DS_Store -x autom4te.cache gcc-4.5.1-orig/libstdc++-v3/configure.host gcc-4.5.1/libstdc++-v3/configure.host
+--- gcc-4.5.1-orig/libstdc++-v3/configure.host	2009-12-01 10:22:04.000000000 +1100
++++ gcc-4.5.1/libstdc++-v3/configure.host	2010-08-25 21:56:47.000000000 +1000
+@@ -203,6 +203,9 @@
+     os_include_dir="os/generic"
+     atomicity_dir="cpu/generic"
+     ;;
++  cnu*)
++    os_include_dir="os/newlib"
++    ;;
+   bsd*)
+     # Plain BSD attempts to share FreeBSD files.
+     os_include_dir="os/bsd/freebsd"
